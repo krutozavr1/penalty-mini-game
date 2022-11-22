@@ -5,9 +5,9 @@ using UnityEngine;
 public class Gates : MonoBehaviour
 {
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.CompareTag("ball"))
+        if(collision.gameObject.CompareTag("ball"))
         {
             ScoreGoal();
         }
@@ -15,6 +15,6 @@ public class Gates : MonoBehaviour
 
     private void ScoreGoal()
     {
-        print("goal");
+        GoalCnt.instance.AddGoal();
     }
 }

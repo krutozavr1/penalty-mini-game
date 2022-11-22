@@ -4,20 +4,16 @@ using UnityEngine;
 
 public class Arrow : MonoBehaviour
 {
-
+    public static Arrow instance;
     SpriteRenderer sprite;
 
-    void Start()
+    void Awake()
     {
+        instance = this;
         sprite = GetComponent<SpriteRenderer>();
     }
 
-    void Update()
-    {
-        
-    }
-
-    public void SetDirection(float val)
+    public void ChangeDirection(float val)
     {
         transform.up += new Vector3(val, 0);
     }
