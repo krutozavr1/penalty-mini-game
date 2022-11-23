@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class Settings : WindowButton
 {
-    void Start()
+    public void ExitGame()
     {
-
+        Application.Quit();
     }
 
 }
