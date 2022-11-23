@@ -16,7 +16,7 @@ public class GateKeeper : MonoBehaviour
         startPos = transform.position;
     }
 
-    public void TryCatchBall()
+    public void TryCatchBall()//jumps in random direction with random speed
     {
         rb.AddForce(new Vector2(Random.Range(-1f, 1f), 0) * 20f, ForceMode2D.Impulse);
     }

@@ -15,7 +15,6 @@ public class GoalCnt : MonoBehaviour
         instance = this;
     }
 
-
     public void AddGoal()
     {
         goalCnt++;

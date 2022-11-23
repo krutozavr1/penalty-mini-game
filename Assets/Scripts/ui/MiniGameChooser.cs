@@ -5,15 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class MiniGameChooser : MonoBehaviour
 {
-    void Start()
-    {
-        
-    }
-
-    void Update()
-    {
-        
-    }
 
     public void LoadMiniGame(string name)
     {

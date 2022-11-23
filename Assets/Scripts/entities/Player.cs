@@ -19,7 +19,7 @@ public class Player : MonoBehaviour
         if((Input.touches.Length > 0) && (canKick))//when player touches screen
         {
             playerTouchedScreen = true;
-            GetDirictionOfKick();
+            ChangeDirictionOfKick();
             StartStrengthScaling();      
         }
         else if(playerTouchedScreen)//when player releases finger
@@ -29,13 +29,12 @@ public class Player : MonoBehaviour
         }
     }
 
-    private void GetDirictionOfKick()
+    private void ChangeDirictionOfKick()
     {
         if (Mathf.Abs(Input.GetTouch(0).deltaPosition.x) > .5f)
         {
             float deltaTouchPos = Input.GetTouch(0).deltaPosition.x / 100;
             Arrow.instance.ChangeDirection(deltaTouchPos);
-
         }
     }
 
@@ -61,9 +60,7 @@ public class Player : MonoBehaviour
 
     private IEnumerator Reset()
     {
-
         yield return new WaitForSeconds(.5f);
-
         canKick = true;
         str = 0;
     }
